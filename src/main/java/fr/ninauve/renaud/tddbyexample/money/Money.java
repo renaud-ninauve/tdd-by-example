@@ -3,11 +3,11 @@ package fr.ninauve.renaud.tddbyexample.money;
 public abstract class Money {
   protected int amount;
 
-  public static Franc franc(int amount) {
+  public static Money franc(int amount) {
     return new Franc(amount);
   }
 
-  public static Dollar dollar(int amount) {
+  public static Money dollar(int amount) {
     return new Dollar(amount);
   }
 
