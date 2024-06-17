@@ -8,14 +8,14 @@ class DollarTest {
 
   @Test
   void testMultiplication() {
-    Money five = new Dollar(5);
-    assertThat(five.times(2)).isEqualTo(new Dollar(10));
-    assertThat(five.times(3)).isEqualTo(new Dollar(15));
+    Money five = Money.dollar(5);
+    assertThat(five.times(2)).isEqualTo(Money.dollar(10));
+    assertThat(five.times(3)).isEqualTo(Money.dollar(15));
   }
 
   @Test
   void equality() {
-    assertThat(new Dollar(5)).isEqualTo(new Dollar(5));
-    assertThat(new Dollar(5)).isNotEqualTo(new Dollar(6));
+    assertThat(Money.dollar(5)).isEqualTo(Money.dollar(5));
+    assertThat(Money.dollar(5)).isNotEqualTo(Money.dollar(6));
   }
 }
