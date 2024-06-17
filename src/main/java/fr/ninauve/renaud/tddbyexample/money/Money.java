@@ -1,6 +1,6 @@
 package fr.ninauve.renaud.tddbyexample.money;
 
-public abstract class Money {
+public class Money {
   protected int amount;
   protected String currency;
 
@@ -23,9 +23,16 @@ public abstract class Money {
     return amount == otherDollar.amount && getClass().equals(other.getClass());
   }
 
-  public abstract Money times(int multiplier);
+  public Money times(int multiplier) {
+    return null;
+  }
 
   public String currency() {
     return currency;
+  }
+
+  @Override
+  public String toString() {
+    return amount + " " + currency;
   }
 }
