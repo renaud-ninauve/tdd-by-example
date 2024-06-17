@@ -9,10 +9,4 @@ public class Dollar extends Money {
   public Dollar times(int multiplier) {
     return new Dollar(amount * multiplier);
   }
-
-  @Override
-  public boolean equals(Object other) {
-    final Money otherDollar = (Money) other;
-    return amount == otherDollar.amount;
-  }
 }
