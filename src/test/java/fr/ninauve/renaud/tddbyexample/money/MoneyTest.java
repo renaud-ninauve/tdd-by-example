@@ -13,6 +13,11 @@ class MoneyTest {
   }
 
   @Test
+  void differentClassEquality() {
+    assertThat(Money.franc(5)).isEqualTo(new Money(5, "CHF"));
+  }
+
+  @Test
   void currency() {
     assertThat(Money.franc(1).currency()).isEqualTo("CHF");
     assertThat(Money.dollar(1).currency()).isEqualTo("USD");
