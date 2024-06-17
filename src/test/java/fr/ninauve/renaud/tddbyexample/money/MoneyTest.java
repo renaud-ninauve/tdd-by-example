@@ -11,4 +11,10 @@ class MoneyTest {
     assertThat(Money.franc(5)).isNotEqualTo(Money.dollar(5));
     assertThat(Money.dollar(5)).isNotEqualTo(Money.franc(5));
   }
+
+  @Test
+  void currency() {
+    assertThat(Money.franc(1).currency()).isEqualTo("CHF");
+    assertThat(Money.dollar(1).currency()).isEqualTo("USD");
+  }
 }
