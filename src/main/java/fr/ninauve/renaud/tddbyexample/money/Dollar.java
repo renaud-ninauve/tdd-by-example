@@ -1,6 +1,7 @@
 package fr.ninauve.renaud.tddbyexample.money;
 
 public class Dollar extends Money {
+  private String currency = "USD";
 
   public Dollar(int amount) {
     super(amount);
@@ -13,6 +14,6 @@ public class Dollar extends Money {
 
   @Override
   public String currency() {
-    return "USD";
+    return currency;
   }
 }

@@ -1,6 +1,7 @@
 package fr.ninauve.renaud.tddbyexample.money;
 
 public class Franc extends Money {
+  private String currency = "CHF";
 
   public Franc(int amount) {
     super(amount);
@@ -13,6 +14,6 @@ public class Franc extends Money {
 
   @Override
   public String currency() {
-    return "CHF";
+    return currency;
   }
 }
