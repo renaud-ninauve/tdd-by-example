@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-class MultiplicationTest {
+class DollarTest {
 
   @Test
   void testMultiplication() {
@@ -14,5 +14,10 @@ class MultiplicationTest {
 
     product = five.times(3);
     assertThat(product.amount).isEqualTo(15);
+  }
+
+  @Test
+  void equality() {
+    assertThat(new Dollar(5)).isEqualTo(new Dollar(5));
   }
 }
