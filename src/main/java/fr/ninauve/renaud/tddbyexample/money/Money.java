@@ -20,7 +20,7 @@ public class Money {
   @Override
   public boolean equals(Object other) {
     final Money otherDollar = (Money) other;
-    return amount == otherDollar.amount && getClass().equals(other.getClass());
+    return amount == otherDollar.amount && currency.equals(otherDollar.currency);
   }
 
   public Money times(int multiplier) {
