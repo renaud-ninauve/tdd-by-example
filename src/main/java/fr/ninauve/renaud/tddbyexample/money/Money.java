@@ -12,8 +12,9 @@ public abstract class Money {
     return new Dollar(amount, "USD");
   }
 
-  public Money(int amount) {
+  protected Money(int amount, String currency) {
     this.amount = amount;
+    this.currency = currency;
   }
 
   @Override
