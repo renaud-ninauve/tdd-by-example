@@ -80,4 +80,15 @@ class MoneyTest {
     final Money result = bank.reduce(fiveDollars.plus(tenFrancs), "USD");
     assertThat(result).isEqualTo(Money.dollar(10));
   }
+
+  @Test
+  void testSumPlusMoney() {
+    final Money fiveDollars = Money.dollar(5);
+    final Money tenFrancs = Money.franc(10);
+    final Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+    final Expression sum = new Sum(fiveDollars, tenFrancs).plus(fiveDollars);
+    final Money result = bank.reduce(sum, "USD");
+    assertThat(result).isEqualTo(Money.dollar(15));
+  }
 }
