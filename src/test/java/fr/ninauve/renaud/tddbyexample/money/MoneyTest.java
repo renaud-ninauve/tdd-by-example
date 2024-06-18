@@ -26,4 +26,10 @@ class MoneyTest {
     assertThat(five.times(2)).isEqualTo(Money.dollar(10));
     assertThat(five.times(3)).isEqualTo(Money.dollar(15));
   }
+
+  @Test
+  void testSimpleAddition() {
+    Money sum = Money.dollar(5).plus(Money.dollar(5));
+    assertThat(sum).isEqualTo(Money.dollar(10));
+  }
 }
