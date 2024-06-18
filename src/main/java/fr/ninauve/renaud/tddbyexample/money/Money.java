@@ -1,6 +1,6 @@
 package fr.ninauve.renaud.tddbyexample.money;
 
-public class Money {
+public class Money implements Expression {
   protected int amount;
   protected String currency;
 
@@ -36,7 +36,7 @@ public class Money {
     return amount + " " + currency;
   }
 
-  public Money plus(Money other) {
+  public Expression plus(Money other) {
     return new Money(amount + other.amount, currency);
   }
 }
