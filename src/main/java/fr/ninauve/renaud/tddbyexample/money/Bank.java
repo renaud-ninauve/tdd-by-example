@@ -2,7 +2,8 @@ package fr.ninauve.renaud.tddbyexample.money;
 
 public class Bank {
 
-  public Money reduce(Expression expression, String currency) {
-    return Money.dollar(10);
+  public Money reduce(Expression expression, String to) {
+    final Sum sum = (Sum) expression;
+    return new Money(sum.augend.amount + sum.addend.amount, to);
   }
 }
