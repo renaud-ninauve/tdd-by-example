@@ -57,4 +57,12 @@ class MoneyTest {
     final Money reduced = bank.reduce(Money.dollar(1), "USD");
     assertThat(reduced).isEqualTo(Money.dollar(1));
   }
+
+  @Test
+  void testReduceMoneyDifferentCurrencies() {
+    final Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+    final Money result = bank.reduce(Money.franc(2), "USD");
+    assertThat(result).isEqualTo(Money.dollar(1));
+  }
 }
