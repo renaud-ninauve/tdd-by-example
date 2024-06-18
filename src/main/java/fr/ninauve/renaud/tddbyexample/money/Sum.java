@@ -15,4 +15,9 @@ public class Sum implements Expression {
     final Money reduceAddend = addend.reduce(bank, to);
     return new Money(reducedAugend.amount + reduceAddend.amount, to);
   }
+
+  @Override
+  public Expression plus(Expression addend) {
+    return null;
+  }
 }
