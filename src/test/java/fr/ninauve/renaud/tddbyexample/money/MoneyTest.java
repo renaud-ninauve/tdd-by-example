@@ -76,7 +76,7 @@ class MoneyTest {
     final Money fiveDollars = Money.dollar(5);
     final Money tenFrancs = Money.franc(10);
     final Bank bank = new Bank();
-    bank.addRate("USD", "CHF", 2);
+    bank.addRate("CHF", "USD", 2);
     final Money result = bank.reduce(fiveDollars.plus(tenFrancs), "USD");
     assertThat(result).isEqualTo(Money.dollar(10));
   }
